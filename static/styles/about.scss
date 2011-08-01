@@ -1,0 +1,67 @@
+@import "base";
+
+#content {
+padding: 0;
+}
+
+#column1-container {
+right: 40%;
+}
+
+#column1 {
+width:60%;
+left:40%;
+}
+
+#column2 {
+width:40%;
+left:40%;
+min-width:350px;
+}
+
+#contact-form input, #contact-form textarea {
+width: 96%;
+min-width: 308px;
+margin-bottom: 10px;
+}
+
+
+#contact-form input[type=submit] {
+height: 4em;
+width: 316px;
+padding: 0;
+margin: 10px auto 0 auto;
+display:block;
+}
+
+#contact-form p { margin: 0 }
+
+#contact-form label {
+display:none;
+}
+
+#contact-error {
+  font-weight: bold;
+  color: rgb(200,0,0);
+  text-shadow: 0px 0px 3px white;
+}
+
+.recaptcha_input_area_text { display: inline !important }
+
+.recaptcha_input_area_text span {
+font-weight:bold;
+color:$content_bgr_color !important;
+}
+
+#recaptcha_response_field {
+min-width: 0 !important;
+}
+
+#recaptcha_area {
+margin:0 auto;
+}
+
+#contact-form iframe {
+width: 308px;
+}
+

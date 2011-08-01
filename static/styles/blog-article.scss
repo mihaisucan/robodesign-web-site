@@ -1,0 +1,132 @@
+@import "base";
+
+#blog-tags a {
+display: inline !important;
+padding: 0 0 0 15px !important;
+}
+
+#blog-tags li:hover,
+#blog-tags li:focus {
+color: $float_menu_links_color;
+background: $float_menu_hover_bgrcolor;
+}
+
+#blog-tags li:hover a,
+#blog-tags li:focus a {
+color: $float_menu_links_color;
+text-shadow:none;
+}
+
+#blog-tags li {
+padding: 8px 20px;
+}
+
+#blog-tags span {
+color: $float_menu_focus_color;
+position:absolute;
+left: 10px;
+}
+
+#blog-tags li:hover span,
+#blog-tags li:focus span {
+color: $float_menu_links_color;
+}
+
+#blog-tags li:hover a,
+#blog-tags li:focus a {
+color: $float_menu_links_color;
+}
+
+.blog-post-tags, .blog-post-date  {
+color: $blog_infos_color;
+font-size: 0.9em;
+font-family: "Droid Sans", Arial, Tahoma, sans-serif;
+}
+
+.blog-post-date {
+float:right;
+margin-left: 10px;
+margin-top: -2px;
+margin-bottom: 0;
+}
+
+.blog-post-tags {
+line-height:1.25em;
+}
+
+.blog-post-tags a {
+color: $blog_infos_color;
+}
+
+.blog-post-tags a:focus {
+color: darken($blog_infos_color, 90%);
+}
+
+.blog-post-tags a:hover {
+color: darken($blog_infos_color, 50%) !important;
+}
+
+.blog-post-title {
+margin-bottom:4px;
+margin-right:36px;
+}
+
+.blog-post-date-info {
+display:none;
+}
+
+.send-feedback {
+margin: 0;
+position: absolute;
+top: 25px;
+right: 27px;
+}
+
+.send-feedback a {
+background: url($imagePath + "/buttons/button-send-feedback.png") no-repeat;
+padding-top: 32px;
+width: 32px;
+height: 0;
+overflow: hidden;
+display: block;
+opacity: 0.15;
+}
+
+.send-feedback a:hover { opacity: 0.7 }
+.send-feedback a:focus { opacity: 1 }
+
+#blog-nav-footer {
+ clear: left;
+}
+
+#blog-nav-footer p {
+font-size: 1.6em;
+font-family: Cambria, "Droid Serif", Georgia, "DejaVu Serif", serif;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+position: relative;
+left: 50%;
+text-transform:lowercase;
+}
+
+#blog-nav-footer .blog-article-prev {
+float: left;
+padding-left: 30px;
+}
+
+#blog-nav-footer .blog-article-next {
+float: right;
+padding-right: 30px;
+}
+
+#blog-nav-footer a {
+text-decoration: none;
+color: $other_blog_posts_link_hover_color;
+}
+
+#blog-nav-footer  a:focus{
+color: $content_link_focus;
+}
+
+#blog-nav-footer  a:hover{
+color: lighten($other_blog_posts_link_hover_color,15%);
+}

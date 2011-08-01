@@ -1,0 +1,900 @@
+
+// settings
+
+$imagePath: "/assets/images";
+$fontPath: "/assets/fonts/";
+$headers: 8;
+$site_min_width: 660px;
+
+@import "theme_default";
+
+@mixin site-width {
+width: 80%;
+max-width: 2048px;
+min-width: $site_min_width;
+margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: local('Yanone Kaffeesatz'), url($fontPath + '/YanoneKaffeesatz-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Sans'), url($fontPath + '/droid/DroidSans.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Droid Sans'), url($fontPath + '/droid/DroidSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Serif'), local('DroidSerif'), url($fontPath + '/droid/DroidSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url($fontPath + '/droid/DroidSerif-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url($fontPath + '/droid/DroidSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Droid Serif Bold Italic'), local('DroidSerif-BoldItalic'), url($fontPath + '/droid/DroidSerif-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Sans Mono'), url($fontPath + '/droid/DroidSansMono.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DejaVu Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('DejaVu Sans'), url($fontPath + '/dejavu/DejaVuSans.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DejaVu Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DejaVu Sans'), url($fontPath + '/dejavu/DejaVuSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DejaVu Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('DejaVu Serif'), local('DejaVuSerif'), url($fontPath + '/dejavu/DejaVuSerif.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DejaVu Serif';
+  font-style: italic;
+  font-weight: normal;
+  src: local('DejaVu Serif Italic'), local('DejaVuSerif-Italic'), url($fontPath + '/dejavu/DejaVuSerif-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DejaVu Serif';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DejaVu Serif Bold'), local('DejaVuSerif-Bold'), url($fontPath + '/dejavu/DejaVuSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DejaVu Serif';
+  font-style: italic;
+  font-weight: bold;
+  src: local('DejaVu Serif Bold Italic'), local('DejaVuSerif-BoldItalic'), url($fontPath + '/dejavu/DejaVuSerif-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Segoe UI SemiBold';
+  src: local('Segoe UI SemiBold'), url($fontPath + '/seguisb.ttf') format('truetype');
+}
+
+
+html,body {
+height: 100%;
+}
+
+body {
+margin: 0px;
+font-family: Arial, "Droid Sans", Tahoma, sans-serif;
+font-size: 0.8em;
+background-color: $color_A;
+}
+
+a {
+color: $content_link;
+}
+
+a:visited {
+text-decoration:none;
+color: $content_link_visited;
+}
+
+a:focus {
+text-decoration:none;
+color: $content_link_focus;
+background-color: $content_link_focus_bgr;
+}
+
+a:hover {
+text-decoration:underline;
+color: $content_link_hover;
+background-color: rgba(0,0,0,0.001);
+}
+
+p {
+margin-top: 0px;
+margin-bottom: 15px;
+line-height: 1.75em;
+}
+
+li {
+margin-top: 0px;
+margin-bottom: 6px;
+line-height: 1.3em;
+}
+
+ol, ul {
+padding-left: 30px;
+}
+
+h2 {
+font-family: Cambria, "Droid Serif", Georgia, "DejaVu Serif", serif;
+font-weight: normal;
+font-size: 2.0em;
+color: $content_titles_link;
+line-height: 1em;
+margin-top: 0px;
+margin-bottom: 15px;
+text-shadow: 1px 1px 3px $content_titles_glow;
+font-size-adjust: 0.46;
+}
+
+h2 a, h2 a:visited {
+color: $content_titles_link;
+text-shadow: 1px 1px 3px $content_titles_glow;
+text-decoration: none;
+}
+
+h2 a:hover, h2 a:visited:hover {
+color: $content_titles_link_hover;
+text-shadow: 1px 1px 3px $content_titles_glow_hover;
+text-decoration: none;
+}
+
+h3 {
+font-family: Cambria, "Droid Serif", Georgia, "DejaVu Serif", serif;
+font-weight: normal;
+font-size: 1.45em;
+color: $content_titles_link;
+margin-bottom: 8px;
+line-height: 1em;
+text-shadow: 1px 1px 2px $content_titles_glow;
+font-size-adjust: 0.45;
+}
+
+h3 a, h2 a:visited {
+color: $content_titles_link;
+text-shadow: 1px 1px 3px $content_titles_glow;
+text-decoration:none;
+}
+
+h3 a:hover, h3 a:visited:hover {
+color: $content_titles_link_hover;
+text-shadow: 1px 1px 3px $content_titles_glow_hover;
+text-decoration:none;
+}
+
+input, textarea {
+background-color: $content_input_field_bgrcolor;
+border: 1px solid $content_input_field_border_color;
+color: $content_input_field_color;
+padding: 4px;
+}
+
+input:hover, textarea:hover {
+background-color: $content_input_field_hover_bgrcolor;
+border: 1px solid $content_input_field_hover_border_color;
+color: $content_input_field_hover_color;
+}
+
+input:focus, textarea:focus {
+background-color: $content_input_field_focus_bgrcolor;
+border: 1px solid $content_input_field_focus_border_color;
+color: $content_input_field_focus_color;
+}
+
+input[type=submit] {
+background-color: $content_input_button_bgrcolor;
+border: 1px solid $content_input_button_border_color;
+color: $content_input_button_color;
+font-weight: bold;
+cursor: pointer;
+}
+
+input[type=submit]:hover{
+background-color: $content_input_button_hover_bgrcolor;
+border: 1px solid $content_input_button_hover_border_color;
+color: $content_input_button_hover_color;
+}
+
+input[type=submit]:focus {
+background-color: $content_input_button_focus_bgrcolor;
+border: 1px solid $content_input_button_focus_border_color;
+color: $content_input_button_focus_color;
+}
+
+code {
+margin: 0 25px 10px;
+display: block;
+font-family: "Droid Sans Mono", "Consolas", monospace;
+font-size: 1.25em;
+}
+
+quote {
+font-family: "Droid Serif", Cambria, Georgia, serif;
+font-size: 1.1em;
+font-style: italic;
+display:block;
+line-height:1.5em;
+margin-bottom: 10px;
+padding: 0 20px;
+font-size-adjust:0.55;
+}
+
+.clearfix:after, #footer-content:after, #menu-align:after, #submenu-bar div:after, #content:after, #page-bar div:after, #footer-nav-align:after {
+content: ".";
+display: block;
+clear: both;
+height: 0;
+visibility: hidden;
+font-size: 0.1em;
+overflow: hidden;
+}
+
+#menu-bar {
+position: absolute;
+bottom: 0;
+width: 100%;
+background: url($imagePath + "/content-bottom-right-darker.png") bottom right no-repeat,
+            url($imagePath + "/content-bottom-left-darker.png") bottom left no-repeat;
+background-color: $top_content_bar_bgr_color;
+min-width: $site_min_width;
+}
+
+#menu-align {
+@include site-width;
+padding: 2px;
+text-transform:lowercase;
+}
+
+#menu-align h1 {
+float:left;
+padding-left: 30px;
+font-family: "Yanone Kaffeesatz", "Trebuchet MS", Helvetica, Arial, sans-serif;
+margin: 0;
+text-shadow: 1px 0px 1px #999,
+             0 0 3px #FFF,
+             0 0 15px rgb(0,0,0),
+             2px 2px 3px rgb(90,90,90);
+line-height: 3.3em;
+font-size: 1em;
+font-size-adjust: 0.5;
+vertical-align: middle;
+}
+
+#menu-align h1:hover, #menu-align h1:focus {
+text-shadow: 0px 0px 5px rgb(230,230,230),
+             0px 0px 15px rgb(0,0,0),
+             0px 0px 15px rgb(0,0,0),
+             0px 0px 5px rgb(0,0,0),
+             2px 2px 3px rgb(0,0,0);
+background-color: rgba(0,0,0,0.001);
+}
+
+#menu-align h1 a {
+text-decoration: none;
+color: $menu_bar_link_color;
+font-size: 2.3em;
+font-weight: normal;
+display: block;
+margin-top: -3px;
+}
+
+#menu-align h1 a:focus {
+color: $menu_bar_link_focus_color;
+}
+
+#menu-align h1 a:hover {
+color: $menu_bar_link_hover_color;
+background-color: rgba(0,0,0,0.001);
+}
+
+#menu-align .active > a {
+color: $menu_bar_link_active_color;
+text-shadow: 0px 0px 15px rgb(0,0,0),
+             0px 0px 20px rgba(0,0,0,0.2),
+             1px 1px 3px rgb(0,0,0);
+}
+
+#menu-align ul a {
+text-decoration: none;
+color: $menu_bar_link_color;
+font-size: 1.5em;
+text-shadow: 0px 0px 15px rgb(90,90,90),
+             1px 1px 3px rgb(50,50,50);
+padding-right: 30px;
+display: block;
+background: rgba(0,0,0,0.01);
+}
+
+#menu-align ul a:focus {
+color: $menu_bar_link_focus_color;
+background-color: rgba(0,0,0,0.001);
+}
+
+#menu-align ul a:hover {
+color: $menu_bar_link_hover_color;
+text-shadow: 0px 0px 3px rgb(220,220,200),
+             0px 0px 2px rgb(170,170,170),
+             0px 0px 15px rgb(0,0,0),
+             0px 0px 20px rgba(0,0,0,0.2),
+             1px 1px 3px rgb(0,0,0);
+}
+
+#menu-align li {
+float: left;
+line-height: inherit;
+margin-bottom:0;
+}
+
+#menu-align ul {
+float:right;
+list-style: none;
+margin: 0 0 2px;
+font-family: "Segoe UI SemiBold", "Trebuchet MS", "Myriad Pro", "Linux Biolinum O", sans-serif;
+line-height: 3em;
+font-size-adjust: 0.53;
+}
+
+#menu-align ul ul { display: none }
+
+#submenu-bar {
+position: absolute;
+bottom: 100%;
+width: 100%;
+background: url($imagePath + "/content-bottom-right-darker.png") bottom right no-repeat,
+            url($imagePath + "/content-bottom-left-darker.png") bottom left no-repeat;
+background-color: $top_content_sub_bar_bgr_color;
+min-width: $site_min_width;
+opacity: 0.8;
+}
+
+#submenu-bar:hover {
+opacity: 1;
+}
+
+#submenu-bar div {
+@include site-width;
+padding: 2px;
+text-transform:lowercase;
+}
+
+#submenu-bar ul {
+float:right;
+list-style: none;
+margin: 0 0 2px;
+font-family: "Segoe UI SemiBold", "Trebuchet MS", "Myriad Pro", "Linux Biolinum O", sans-serif;
+line-height: 3em;
+font-size-adjust: 0.53;
+}
+
+#submenu-bar .active a {
+color: $menu_bar_link_active_color;
+text-shadow: 0px 0px 15px rgb(0,0,0),
+             0px 0px 20px rgba(0,0,0,0.2),
+             1px 1px 3px rgb(0,0,0);
+}
+
+#submenu-bar a {
+text-decoration: none;
+color: $menu_bar_link_color;
+font-size: 1.3em;
+text-shadow: 0px 0px 15px rgb(90,90,90),
+             1px 1px 3px rgb(50,50,50);
+padding-right: 30px;
+display: block;
+background: rgba(0,0,0,0.01);
+}
+
+#submenu-bar a:focus {
+color: $menu_bar_link_focus_color;
+background-color: rgba(0,0,0,0.001);
+}
+
+#submenu-bar a:hover {
+color: $menu_bar_link_hover_color;
+text-shadow: 0px 0px 3px rgb(220,220,200),
+             0px 0px 2px rgb(170,170,170),
+             0px 0px 15px rgb(0,0,0),
+             0px 0px 20px rgba(0,0,0,0.2),
+             1px 1px 3px rgb(0,0,0);
+}
+
+#submenu-bar li {
+float: left;
+line-height: inherit;
+margin-bottom:0;
+}
+
+#main {
+z-index: 2000;
+background: $main_bgr;
+min-height: 700px;
+position:relative;
+min-width: $site_min_width;
+}
+
+#header {
+min-width: $site_min_width;
+z-index: 1000;
+position: relative;
+background-color: $top_content_bgr_color;
+background-repeat: no-repeat;
+background-position: top center;
+height: 25%;
+min-height: 7.5em;
+}
+
+@for $i from 1 through $headers {
+  .header#{$i} {
+	background-image: url($imagePath + "/headers/header" + $i + ".jpg");
+  }
+}
+
+#page-bar {
+border-top: 1px solid darken($page_bar_bgrcolor, 40%);
+background: url($imagePath + "/content-bottom-right-darker.png") bottom right no-repeat,
+            url($imagePath + "/content-bottom-left-darker.png") bottom left no-repeat;
+background-color: $page_bar_bgrcolor;
+min-width: $site_min_width;
+}
+
+#page-bar div {
+@include site-width;
+padding: 0;
+position: relative;
+font-family: "Segoe UI SemiBold", "Trebuchet MS", "Linux Biolinum O", "Myriad Pro Light", sans-serif;
+z-index: 7000;
+}
+
+#page-bar div > ul {
+float:right;
+position: relative;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+#page-bar div > ul > li {
+float: left;
+position: relative;
+margin: 0;
+}
+
+#page-bar  div > ul > .active > a {
+color: $page_bar_active_color;
+background: $page_bar_active_bgrcolor;
+text-shadow: none;
+}
+
+#page-bar  div > ul > li > ul {
+min-width: 125px;
+}
+
+#page-bar  div > ul > li > ul > .active > a {
+color: $float_menu_active_color;
+background: $float_menu_active_bgrcolor;
+text-shadow: none;
+}
+
+#page-bar div > ul > li > a {
+display:block;
+text-decoration: none;
+color: $page_bar_links_color;
+text-transform:lowercase;
+font-size: 1.3em;
+margin: 0;
+padding: 10px 15px;
+text-shadow: 2px 2px 3px #555;
+line-height: normal;
+}
+
+#page-bar div > ul > li:last-child {
+margin-right: 15px;
+}
+
+#page-bar div > ul > li > a:focus {
+color: $page_bar_focus-color;
+background: $page_bar_focus_bgrcolor;
+text-shadow: 2px 2px 3px #333;
+}
+
+#page-bar div > ul > li:hover > a {
+background: $page_bar_hover_bgrcolor;
+color: $page_bar_hover_color;
+text-shadow: 2px 2px 3px #333;
+}
+
+#page-bar ul ul {
+white-space: nowrap;
+list-style: none;
+margin:0;
+padding: 0 0 10px 0;
+position: absolute;
+top:99%;
+right: 0;
+text-align:right;
+background: $float_menu_bgrcolor;
+box-shadow:0px 2px 4px $float_menu_glow_color;
+-webkit-box-shadow:0px 2px 4px $float_menu_glow_color;
+-moz-box-shadow:0px 2px 4px $float_menu_glow_color;
+text-shadow: 1px 1px 3px #000;
+font-size-adjust:0.55;
+display:none;
+}
+
+#page-bar div > ul > li:hover > ul,
+#page-bar div > ul > li:focus > ul {
+display:block;
+}
+
+#page-bar ul ul a {
+text-decoration: none;
+color: $float_menu_links_color;
+padding: 10px 20px;
+display: block;
+}
+
+#page-bar ul ul a:focus {
+color: $float_menu_focus_color;
+background: $float_menu_focus_bgrcolor;
+}
+
+#page-bar ul ul a:hover {
+color: $float_menu_hover_color !important;
+background: $float_menu_hover_bgrcolor !important;
+text-shadow: none;
+}
+
+#page-bar ul ul li {
+margin:0;
+}
+
+#content-align {
+@include site-width;
+color: $content_text;
+background: $content_bgr;
+min-height: 100%;
+border: 1px solid darken($content_column_bgr_color,3%);
+box-shadow: 0px 0px 125px $content_glow_color;
+}
+
+#content {
+position: relative;
+padding: 30px;
+min-height: 750px;
+}
+
+#back-to-top, #skip-navigation {
+display:none;
+}
+
+#footer {
+background: url($imagePath + "/content-bottom-right-darker.png") bottom right no-repeat,
+            url($imagePath + "/content-bottom-left-darker.png") bottom left no-repeat;
+background-color: $footer_bgr_color;
+min-width: $site_min_width;
+z-index: 9000;
+}
+
+#footer-nav {
+background: url($imagePath + "/content-bottom-right-darker.png") bottom right no-repeat,
+            url($imagePath + "/content-bottom-left-darker.png") bottom left no-repeat;
+background-color: $footer_bgr_altcolor;
+}
+
+#footer-nav-align {
+@include site-width;
+padding: 10px 0 0;
+}
+
+#footer-content {
+@include site-width;
+padding: 10px;
+color: $footer_text_color;
+font-family: "Segoe UI SemiBold", "Myriad Pro", "Droid Sans", "Linux Biolinum O", sans-serif;
+}
+
+#footer-nav-align ol {
+list-style: none;
+margin: 0 0 0 30px;
+padding: 0;
+}
+
+#footer-nav-align {
+font-family: "Segoe UI SemiBold", "Myriad Pro", "Droid Sans", "Linux Biolinum O", sans-serif;
+color: $footer_links_color;
+font-size-adjust: 0.55;
+}
+
+#breadcrumb li {
+display: inline;
+padding-right: 3px;
+}
+
+#footer-nav-align p {
+line-height: 1.25em;
+}
+
+#footer-nav-align a {
+text-decoration: none;
+color: $footer_links_color;
+}
+
+#footer-nav-align a:focus {
+color: $footer_links_focus_color;
+background-color: rgba(0,0,0,0.001);
+}
+
+#footer-nav-align a:hover {
+color: $footer_links_hover_color;
+text-shadow: 0px 0px 4px #555,
+             0px 0px 6px #555;
+}
+
+#breadcrumb li:before {
+  content: " » ";
+  margin-right: 3px;
+}
+#breadcrumb li:first-child:before {
+  content: "";
+}
+#breadcrumb li:first-child a {
+  margin-left: 0;
+}
+
+#breadcrumb li:first-child {
+  padding-left: 0;
+}
+
+#search-form {
+float:right;
+margin: 0 30px;
+margin-left: 15px;
+margin-top: -1px;
+}
+
+#search-field {
+vertical-align:middle;
+background-color: desaturate(lighten($footer_bgr_color, 12%), 25%);
+border: 1px solid desaturate(lighten($footer_bgr_color, 40%), 20%);
+color: desaturate(lighten($footer_bgr_color, 45%), 25%);
+padding-top: 2px;
+padding-bottom: 2px;
+font-family: "Segoe UI SemiBold", "Droid Sans", sans-serif;
+}
+
+#search-field:hover {
+background-color: desaturate(darken($footer_bgr_color, 1%), 25%);
+border: 1px solid desaturate(lighten($footer_bgr_color, 45%), 20%);
+color: desaturate(lighten($footer_bgr_color, 75%), 25%);
+}
+
+#search-field:focus {
+background-color: desaturate(darken($footer_bgr_color, 15%), 25%);
+border: 1px solid desaturate(lighten($footer_bgr_color, 65%), 20%);
+color: desaturate(lighten($footer_bgr_color, 95%), 25%);
+}
+
+#search-form input[type=image] {
+padding: 0;
+border: 1px solid desaturate(lighten($footer_bgr_color, 40%), 20%);
+vertical-align:middle;
+}
+
+#search-form input[type=image]:hover {
+border: 1px solid desaturate(darken($footer_bgr_color, 1%), 25%);
+}
+
+#accessibility p > a {
+padding: 20px 0;
+}
+
+#accessibility, #sitemap-link {
+float:left;
+margin-right: 6px;
+margin-left: 10px;
+}
+
+#accessibility {
+position: relative;
+}
+
+#accessibility ul a {
+color: $float_menu_links_color;
+padding: 12px 20px;
+display: block;
+text-shadow: 1px 1px 3px #000;
+font-family: "Segoe UI SemiBold", "Trebuchet MS", "Linux Biolinum O", "Myriad Pro Light", sans-serif;
+font-size-adjust: 0.55;
+text-transform: none;
+}
+
+#accessibility ul a:focus {
+color: $float_menu_focus_color;
+background: $float_menu_focus_bgrcolor;
+}
+
+#accessibility ul a:hover {
+color: $float_menu_hover_color;
+background: $float_menu_hover_bgrcolor;
+text-shadow: none;
+}
+
+#accessibility ul {
+box-shadow: 0px -2px 4px $float_menu_glow_color;
+-webkit-box-shadow:0px -2px 4px $float_menu_glow_color;
+-moz-box-shadow:0px -2px 4px $float_menu_glow_color;
+text-align: right;
+z-index: 3500;
+white-space: nowrap;
+list-style: none;
+margin:0;
+padding:0;
+margin-bottom: 10px;
+background: $float_menu_bgrcolor;
+position: absolute;
+right: -23px;
+bottom: 100%;
+display: none;
+}
+
+#accessibility li {
+margin:0;
+padding:0;
+}
+
+#accessibility:hover ul {
+display:block;
+}
+
+#site-options {
+float:right;
+}
+
+#search-form p, #search-form div {
+margin: 0;
+display:inline;
+}
+
+#breadcrumb p, #search-form label {
+display:none;
+}
+
+#breadcrumb {
+float:left;
+}
+
+#robodesign {
+float: right;
+margin: 0 30px 0 0;
+}
+
+#robodesign a {
+background: url($imagePath + "/robodesign-logo.png") no-repeat;
+padding-top: 28px;
+width: 85px;
+height: 0;
+overflow: hidden;
+display: block;
+opacity: 0.4;
+}
+
+#robodesign a:hover, #robodesign a:focus { opacity: 0.7 }
+
+#copyright {
+font-weight: bold;
+margin: 0 0 0 30px;
+vertical-align: middle;
+}
+
+#column2-container {
+clear:left;
+float:left;
+width:100%;
+overflow:hidden;
+min-height:100%;
+}
+
+#column1-container {
+float:left;
+width:100%;
+position:relative;
+right:50%;
+background: $content_column_bgr;
+min-height:100%;
+}
+
+#column1 {
+float:left;
+width:50%;
+position:relative;
+left:50%;
+min-height: 750px;
+}
+
+#column2 {
+float:left;
+width:50%;
+position:relative;
+left:50%;
+overflow:hidden;
+}
+
+.column-content { padding: 30px }
+
+::selection {
+background: $site_selection_bgrcolor;
+color: $site_selection_color;
+}
+
+// Error page
+
+#error-message, #error-404 {
+padding-top: 20px;
+font-weight: bold;
+font-size: 1.5em;
+text-align: center;
+letter-spacing: 1px;
+color: $error_message_text;
+padding: 15px 50px;
+}
+
+#error-box {
+border-radius: 100px;
+-moz-border-radius: 100px;
+padding: 50px;
+width: 50px;
+text-align:center;
+text-shadow: 0 0 3px white, 0 0 6px white;
+color:white;
+box-shadow: 0px 0px 6px red, inset 0px 0px 9px yellow;
+-moz-box-shadow: 0px 0px 6px red, inset 0px 0px 9px yellow;
+-webkit-box-shadow: 0px 0px 6px red;
+background:$error_message_sign;
+margin:0 auto;
+}

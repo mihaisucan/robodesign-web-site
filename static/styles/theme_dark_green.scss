@@ -1,0 +1,99 @@
+// colours
+$color_A: rgb(170,215,80);  // blue
+
+$color_B: rgb(250,230,90); // red
+
+$shades_black: rgb(0,0,0); // black
+$shades_gray: lighten($shades_black, 50%);
+$shades_white: lighten($shades_black, 100%);
+
+//meta-colours
+$footer_bgr_color: darken($color_A, 5%);
+$footer_bgr_altcolor: lighten($footer_bgr_color, 10%);
+$footer_text_color: lighten($footer_bgr_color, 45%);
+$footer_links_color: lighten($footer_bgr_color, 90%);
+$footer_links_hover_color: lighten($footer_bgr_color, 50%);
+$footer_links_focus_color: lighten($footer_bgr_color, 40%);
+
+$top_content_bgr_color: $shades_black;
+$top_bar_hud_color: $shades_black;
+$top_content_bar_bgr_color: transparentize($top_bar_hud_color, 0.5);
+$top_content_sub_bar_bgr_color: transparentize($top_bar_hud_color, 0.6);
+
+$page_bar_bgrcolor: $footer_bgr_altcolor;
+$page_bar_links_color: $footer_links_color;
+$page_bar_hover_color: lighten($page_bar_bgrcolor, 30%);
+$page_bar_hover_bgrcolor: $top_bar_hud_color;
+$page_bar_active_color: lighten($page_bar_bgrcolor, 45%);
+$page_bar_active_bgrcolor: $page_bar_bgrcolor;
+$page_bar_focus_color: lighten(desaturate($page_bar_bgrcolor, 60%),30%);
+$page_bar_focus_bgrcolor: darken($page_bar_bgrcolor, 20%);
+
+$float_menu_bgrcolor: transparentize($top_bar_hud_color, 0.2);
+$float_menu_glow_color: darken($float_menu_bgrcolor,45%);
+$float_menu_links_color: $shades_white;
+$float_menu_hover_color: $float_menu_links_color;
+$float_menu_hover_bgrcolor: $page_bar_bgrcolor;
+$float_menu_active_color: darken($float_menu_links_color,25%);
+$float_menu_active_bgrcolor: darken($page_bar_bgrcolor,7%);
+$float_menu_focus_color: lighten($shades_gray,25%);
+$float_menu_focus_bgrcolor: darken($top_bar_hud_color, 70%);
+
+$main_bgr_color: darken($color_A, 33%);
+$main_bgr: no-repeat top center $main_bgr_color;
+$content_bgr_color: $main_bgr_color;
+$content_bgr: repeat-x top $content_bgr_color;
+$content_glow_color: transparentize(darken($content_bgr_color, 20%), 0.5);
+$content_text: $shades_black;
+$content_column_bgr_color: darken($content_bgr_color, 2%);
+$content_column_bgr: url($imagePath + "/column-background.png") right repeat-y $content_column_bgr_color;
+$content_titles_link:  $color_B;
+$content_titles_link_hover:  lighten($content_titles_link, 25%);;
+$content_titles_glow: rgba(255,235,0,0.25);
+$content_titles_glow_hover: rgba(200,200,0,0.45);
+$content_link:  $color_A;
+$content_link_visited:  lighten($content_text, 30%);
+$content_link_hover:  lighten($content_link, 25%);
+$content_link_focus:  darken($content_text, 40%);
+$content_link_focus_bgr: rgba(0,0,0,0.07);
+
+$content_input_field_base_color: $content_bgr_color; 
+$content_input_field_bgrcolor: darken($content_input_field_base_color, 5%);
+$content_input_field_border_color: darken($content_input_field_base_color, 30%);
+$content_input_field_color: darken($content_input_field_base_color, 45%);
+
+$content_input_field_hover_bgrcolor: lighten($content_input_field_base_color, 5%);
+$content_input_field_hover_border_color: darken($content_input_field_base_color, 55%);
+$content_input_field_hover_color: darken($content_input_field_base_color, 65%);
+
+$content_input_field_focus_bgrcolor: lighten($content_input_field_base_color, 15%);
+$content_input_field_focus_border_color: lighten($page_bar_bgrcolor, 15%);
+$content_input_field_focus_color: darken($content_input_field_base_color, 95%);
+
+$content_input_button_base_color: $content_input_field_base_color; 
+
+$content_input_button_bgrcolor: darken($content_input_button_base_color, 75%);
+$content_input_button_border_color: darken($content_input_button_base_color, 30%);
+$content_input_button_color: darken($content_input_button_base_color, 20%);
+
+$content_input_button_hover_bgrcolor: darken($content_input_button_base_color, 60%);
+$content_input_button_hover_border_color: darken($content_input_button_base_color, 90%);
+$content_input_button_hover_color: lighten($content_input_button_base_color, 20%);
+
+$content_input_button_focus_bgrcolor: darken($content_input_button_base_color, 10%);
+$content_input_button_focus_border_color: darken($content_input_button_base_color, 10%);
+$content_input_button_focus_color: darken($content_input_button_base_color, 75%);
+
+$blog_infos_color: lighten($content_text, 25%);
+$other_blog_posts_link_color: darken($page_bar_bgrcolor, 5%);
+$other_blog_posts_link_hover_color: lighten($page_bar_bgrcolor, 20%);
+
+$menu_bar_link_color: $float_menu_links_color;
+$menu_bar_link_hover_color: $page_bar_hover_color;
+$menu_bar_link_focus_color: $float_menu_focus_color;
+$menu_bar_link_active_color: $float_menu_focus_color;
+
+$error_message_text: rgb(150,0,0);
+$error_message_sign: $error_message_text;
+$site_selection_bgrcolor: rgb(0,50,150);
+$site_selection_color: rgb(240,240,240);

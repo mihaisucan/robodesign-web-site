@@ -1,0 +1,347 @@
+﻿body {
+background: white;
+}
+
+a {
+color: rgb(150,150,150);
+}
+
+a:visited {
+color: rgb(195,195,195);
+}
+
+a:hover {
+color: rgb(220,220,220);
+}
+
+h2  {
+color: rgb(255,0,0);
+text-shadow: none;
+}
+
+h3 {
+color: rgb(255,0,0);
+text-shadow: none;
+}
+
+input, textarea {
+background-color: rgb(200,0,0);
+border: 1px solid rgb(110,0,0);
+color: rgb(255,255,255);
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+background-color: black;
+border: 1px solid white;
+color: white;
+}
+
+input[type=submit] {
+background-color: rgb(255,50,50);
+border: 1px solid white;
+color: white;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+background-color: rgb(255,100,100);
+color:black;
+text-shadow: none;
+}
+
+#menu-bar {
+background: rgb(255,0,0);
+}
+
+#menu-align h1 {
+text-shadow: none;
+}
+
+#menu-align h1:hover, #menu-align h1:focus {
+text-shadow: none;
+}
+
+#menu-align h1 a {
+color: black;
+}
+
+#menu-align h1 a:hover, #menu-align h1 a:focus {
+color: white;
+}
+
+#menus .active > a {
+color: white;
+text-shadow: none;
+}
+
+#menus a {
+color: black;
+text-shadow: none;
+}
+
+#menus a:hover {
+color: white;
+text-shadow: none;
+}
+
+#main {
+background: none;
+background-color: white;
+}
+
+#header {
+background: none;
+background-color: rgb(150,0,0);
+}
+
+#content-align {
+background: white;
+}
+
+#content {
+color: black;
+}
+
+#footer {
+color: white;
+background: rgb(255,0,0);
+}
+
+#footer-content {
+color: white;
+}
+
+#footer-nav {
+background: rgba(0,0,0,0.2);
+}
+
+#footer-nav-align {
+color: black;
+text-shadow: none;
+background: none;
+}
+
+#footer-nav-align a {
+color: black;
+}
+
+#footer-nav-align a:hover {
+color: white;
+text-shadow: none;
+}
+
+#search-field {
+background-color: rgb(220,220,220);
+border: 1px solid rgb(100,100,100);
+color: rgb(100,100,100);
+}
+
+#search-field:hover, #search-field:focus {
+background-color: white;
+border: 1px solid rgb(100,100,100);
+color: rgb(10,10,10);
+}
+
+#search-form input[type=image] {
+border: 1px solid rgb(135,135,135);
+}
+
+#search-form input[type=image]:hover {
+border: 1px solid rgb(90,90,90);
+}
+
+#robodesign a {
+background: url("../images/robodesign-logo-invert.png") no-repeat;
+opacity: 0.3;
+}
+
+#robodesign a:hover, #robodesign a:focus { opacity: 1 }
+
+#sitemap > li {
+color: black;
+}
+
+#sitemap > li > a {
+color: black;
+text-shadow: none;
+}
+
+#sitemap > li > a:hover {
+color: red;
+border-bottom: 2px solid #555;
+}
+
+#sitemap > li > ul > li:last-child { border-right: 0 }
+
+#sitemap > li > ul > li > a {
+color: black;
+background: rgba(255,0,0,0.05);
+}
+
+#sitemap > li > ul > li > a:hover{
+color: black;
+background: rgba(255,0,0,0.1);
+}
+
+#sitemap > li > ul > li > ul > li > a {
+color: black;
+}
+
+#sitemap > li > ul > li > ul > li > a:hover {
+color: red;
+background: rgba(255,0,0,0.05);
+}
+
+
+#blog-bar {
+background-image: none;
+border-top: none;
+background-color: red;
+}
+
+#blog-bar-align {
+background: none;
+}
+
+#blog-bar-align p a {
+color: black;
+text-shadow: none;
+}
+
+#blog-bar-align ol a, #blog-bar-align ul a {
+color: black;
+}
+
+#blog-friends ul, #blog-tags ul, #blog-archive ul, #blog-feeds ul,
+#blog-friends ol, #blog-tags ol, #blog-archive ol, #blog-feeds ol {
+text-shadow: none;
+}
+
+#blog-bar-align ol a:hover,
+#blog-bar-align ol a:focus,
+#blog-bar-align ul a:hover,
+#blog-bar-align ul a:focus {
+color: white;
+background: rgba(255,0,0,1);
+}
+
+#blog-bar-align ol, #blog-bar-align ul {
+background: rgba(255,255,255,0.85);
+}
+
+#blog-bar-align p {
+text-shadow: -2px -2px 6px #555, 2px 2px 4px #555;
+}
+
+#blog-tags li:hover,
+#blog-tags li:focus {
+background: rgba(255,0,0,1);
+}
+
+#blog-tags span {
+color: rgb(100,0,0);
+}
+
+#blog-tags li:hover span,
+#blog-tags li:focus span {
+color: rgb(255,0,0);
+}
+
+#blog-tags li:hover a,
+#blog-tags li:focus a {
+color: #FFF;
+}
+
+.blog-post-date {
+color: rgb(150,150,150);
+}
+
+.blog-post-tags {
+color: rgb(150,150,150);
+}
+
+.blog-post-title a {
+color:red;
+}
+
+.blog-post-title a:hover {
+color:rgb(190,0,0);
+}
+
+#blog-nav-footer a {
+color: rgb(150,150,150);
+}
+
+#blog-nav-footer  a:hover, #blog-nav-footer a:focus {
+color: rgb(255,50,50);
+}
+
+#read-more {
+color: rgb(250,250,250);
+}
+
+#read-more:hover {
+color: rgb(200,200,200);
+}
+
+#other-blog-posts a {
+color: rgb(200,50,50);
+}
+
+#other-blog-posts a:hover {
+color: rgb(250,150,150);
+}
+
+#search-result-info {
+color: black;
+}
+
+#search-pages {
+color: black;
+}
+.search-extract a {
+color: black;
+}
+
+.search-title a {
+color: red;
+}
+
+.search-title a:hover {
+color: rgb(150,0,0);
+}
+
+#accessibility ul a {
+font-weight:bold;
+color: black;
+text-shadow:none;
+}
+
+#accessibility ul a:hover , #accessibility ul a:focus {
+color: white;
+background: rgba(255,0,0,0.9);
+text-shadow:none;
+}
+
+#accessibility ul {
+box-shadow: none;
+-webkit-box-shadow:none;
+-moz-box-shadow: none;
+background: rgba(255,255,255,0.85);
+}
+
+#column1 {
+background: none;
+}
+
+#column2 {
+background: none;
+}
+
+#column1-container {
+background:none;
+background-color: rgba(255,255,255,0.15);
+}
+
+#column2-container {
+background: none;
+}
